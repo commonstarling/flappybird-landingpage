@@ -1,1 +1,84 @@
-body {}
+$font-color: white;
+$link-color: white;
+$hover-link-color: #F0AF35;
+$primary-color: #4eb4ca;
+$secondary-color: #a3f450;
+
+$header-font: 'Righteous', sans-serif;
+$text-font: 'Lato', sans-serif;
+
+$tablet: 'min-width: 768px';
+$desktop: 'min-width: 1024px';
+
+
+
+
+body {
+  background-color: $primary-color;
+  text-align: center;
+  color: $font-color;
+  text-shadow: 1px 1px black;
+  font-size: 1.5em;
+  .navigation, footer {
+        width: 100%;
+        @media screen and ($tablet) {
+            width: 90%;
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        @media screen and ($desktop) {
+            max-width: 1040px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    }
+
+    section {
+        width: 100%;
+        @media screen and ($tablet) {
+        }
+        @media screen and ($desktop) {
+        }
+    }
+    h1, h2 {
+      font-family: $header-font
+    }
+    p {
+      font-family: $text-font;
+    }
+    nav {
+      background-color: $secondary-color;
+      width: 100%;
+      height: 40%;
+      text-align: center;
+    }
+    ul {
+      list-style: none;
+      li {
+        display: inline-block;
+        padding: 1.5em;
+        font-size: 1em;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: $link-color;
+      text-shadow: 1px 1px black;
+      display: block;
+      }
+    a:hover {
+      color: $hover-link-color;
+    }
+    .call-to-action {
+      font-size: 3em;
+    }
+    footer {
+      background-color: $secondary-color;
+      height: 40%;
+  }
+}
